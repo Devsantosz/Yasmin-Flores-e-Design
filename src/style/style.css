@@ -18,32 +18,29 @@ body {
 }
 
 /* HEADER */
-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-items: center;
-    flex-direction: column;
-    z-index: 999;
-    display: flex;
-    padding: 10px;
-     background: linear-gradient(90deg, #6b2bbf, #b98cff);
-    border-bottom: 1px solid black;
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+  padding: 10px;
+  background: linear-gradient(90deg, #6b2bbf, #b98cff);
+  border-bottom: 1px solid black;
 }
 
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    transition: 0.3s;
-    padding-bottom: 5px;
-    
-    transform: ease;
+nav a{
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 5px;
+  transition: 0.3s ease;
 }
+
 
 nav a:hover {
     transition: 0.5s ease;
@@ -52,8 +49,9 @@ nav a:hover {
 
 main{
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr min(1100px, 100%) 1fr;
 }
+
 
 /* padrão: seções centralizadas na coluna do meio */
 .sec{
@@ -66,20 +64,27 @@ main{
 
 /* WELCOME full width (se você quiser ele ocupando tudo) */
 #welcome{
-  
   grid-column: 1 / -1;
   position: relative;
   width: 100%;
-  height: calc(100vh - 58px);
+  min-height: calc(100vh - 58px);
   display: grid;
   align-content: space-evenly;
 }
 
 
+
 /* se você quiser SOBRE e TRABALHO full width também, use 1/-1 */
-#sobre,
 #trabalho{
+  background: #01d6cc;
   grid-column: 2;
+  display: grid;
+  place-items: center;
+  padding: 40px 15px;
+}
+
+.conteudo{
+  max-width: 700px;
 }
 
 /* Flores agora ficam presas ao #welcome */
@@ -113,8 +118,7 @@ main{
 
 #welcome #img-inicio{
     padding: 10px;
-    width: 450px;
-    max-width: 60%;
+    width: min(450px, 85vw);
     margin: auto;
     border-radius: 100px 0;
     border: 1px solid black;
@@ -177,6 +181,7 @@ main{
 
 .sobre-container{
   width: min(1100px, 100%);
+  min-height: 100vh;
   margin: 0 auto;
 
   display: grid;
@@ -266,7 +271,7 @@ main{
 .card{
   background: #ffffff;
   border-radius: 16px;
-  padding: 5px;
+  padding: 14px; 
   border: 1px solid rgba(0,0,0,0.1);
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   transition: transform 0.25s ease;
