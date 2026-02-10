@@ -35,9 +35,7 @@ html, body{
 }
 
 body{
-  background: radial-gradient(1200px 800px at 20% 10%, rgba(185,140,255,0.18), transparent 60%),
-              radial-gradient(900px 600px at 85% 40%, rgba(107,43,191,0.12), transparent 60%),
-              var(--bg);
+  background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
 }
@@ -98,26 +96,17 @@ main{
 ========================= */
 #welcome{
   grid-column: 1 / -1;
-  min-height: calc(100vh - 60px); /* altura do header */
+  min-height: calc(100vh - 60px); 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  position: relative;
+  overflow: hidden;
+
 }
 
-#welcome::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.7)),
-    linear-gradient(90deg, rgba(107,43,191,0.08), rgba(185,140,255,0.10));
-  pointer-events: none;
-}
-
-#welcome .hero{
-  /* caso você queira criar uma div futuramente */
-}
 
 #welcome h2{
   position: relative;
@@ -287,11 +276,20 @@ main{
 
 .sec{
   grid-column: 2;
-  min-height: 100vh; /* garante no mínimo 100vh */
+  min-height: 100vh; 
   display: flex;
-  align-items: center;  /* centraliza vertical */
-  justify-content: center; /* centraliza horizontal */
+  align-items: center;  
+  justify-content: center; 
   padding: 70px 16px;
+
+  grid-column: 2;
+  min-height: 100vh;
+  padding: 70px 16px;
+}
+.sec.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card{
