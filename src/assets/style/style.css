@@ -60,7 +60,7 @@
       overflow: hidden;
       border: 2px solid var(--brand);
 
-      transition: color 0.3s linear;
+      transition: color 0.3s ease;
 
       position: absolute;
       top: 90%;
@@ -110,39 +110,27 @@
       margin-top: 20px;
     }
 
-    .galeria::after{
-      right: 0;
-      background: linear-gradient(to left, var(--brand2), transparent);
-    }
-
-    .galeria{
-      position: relative;
-    }
-
     .carrossel{
       display: flex;
       gap: 20px;
       width: max-content;
 
-      animation: slide 12s linear infinite alternate;
+      animation: slide 12s ease-in-out infinite alternate;
     }
 
     .carrossel img{
       width: 280px;
-      height: 180px;
+      height: 150px;
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-
-      flex-shrink: 0; /* MUITO IMPORTANTE */
     }
 
-    /* pausa no hover */
     .carrossel:hover{
       animation-play-state: paused;
     }
 
-    /* animação */
+    /* animação vai e volta */
     @keyframes slide{
       0%{
         transform: translateX(0);
