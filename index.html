@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasmin Flores & Design</title>
-    <link rel="shortcut icon" href="src/image/flor.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/assets/style/style.css">
+  
+  <title>Yasmin Flores & Design</title>
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <a href="#welcome">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#trabalho">Trabalho</a>
-        </nav>
+        <a href="#inicio">Início</a>
+        <a href="#galeria">Buquês</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
     </header>
 
-    <main>
-        <section id="welcome" class="sec">
-             <img src="src/image/flor_1.png" alt="flor1" id="flor1">
-            <img src="src/image/flor_2.png" alt="flor2" id="flor2">
-                <h2>
-                    Yasmin <br> Flores & Design
-                </h2>
-                <img src="src/image/buque (7).jpg" alt="buque" id="img-inicio">
-                <p>
-                    Porque a vida com flor, tem sabor de felicidade 
-                </p>
-                <a href="#sobre">Descubra a sua favorita</a>
-        </section>
+    <section id="inicio">
+        <h1>Flores & Design</h1>
+        <p>Porque a vida com flor, tem sabor de felicidade 🌸</p>
+        <a href="#galeria" class="btn">Ver mais</a>
+    </section>
 
-        <section id="sobre" class="sec">
-            <div class="sobre-container">
-                <div class="sobre-img">
-                    <h1>Florista</h1>
-                    <img src="src/image/miiim-perfil.png" alt="Florista trabalhando com arranjos">
-                    <h2>
-                        Yasmin Rodrigues
-                    </h2>
-                    
-                </div>
-
-                <div class="sobre-texto">
-                    <p>
-                        Entusiasta da flora e do design floral, encontro na montagem de arranjos um exercício de criatividade e atenção aos detalhes. Para mim, cuidar de flores é mais que um hobby: é uma forma de cultivar paciência e harmonia, habilidades que transponho para minha trajetória profissional e pessoal
-                    </p>
-                    <div class="sobre-diferenciais">
-                            <div class="card">
-                                <h3>🌸 Flores Frescas</h3>
-                                <p>Selecionadas diariamente para garantir qualidade e beleza.</p>
-                            </div>
-
-                            <div class="card">
-                                <h3>🎨 Design Personalizado</h3>
-                                <p>Arranjos exclusivos pensados para cada cliente.</p>
-                            </div>
-
-                            <div class="card">
-                                <h3>💌 Feito com Amor</h3>
-                                <p>Cada detalhe é preparado com carinho e dedicação.</p>
-                            </div>
-                    </div>
-                </div>
+    <section id="galeria">
+    <h2>Buquês</h2>
+        <div class="galeria">
+            <div class="carrossel">
+                <img src="src/assets/image/buque (6).jpg" />
+                <img src="src/assets/image/orquidea (2).jpg " />
+                <img src="src/assets/image/buque (9).jpg" />
+                <img src="src/assets/image/orquidea-cesta.jpg" alt="">
+                <!-- duplica para efeito infinito -->
+                <img src="src/assets/image/buque (8).jpg" />
+                <img src="src/assets/image/orquidea (3).jpg" />
+                <img src="src/assets/image/buque (9).jpg" />
             </div>
-        </section>
+        </div>
+        <div class="expliq">
 
-        <section id="trabalho" class="sec">
-            <div class="conteudo">
-                <h2>Nossos Trabalhos</h2>
-                <p>
-                    Buquês, decorações para eventos, casamentos e presentes especiais.
-                </p>
+            <div class="galeria">
+                <img src="src/assets/image/buque (6).jpg" />
+                <img src="src/assets/image/orquidea (2).jpg " />
+                <img src="src/assets/image/buque (9).jpg" />
+                <img src="src/assets/image/orquidea-cesta.jpg" alt="">
+                
+                <img src="src/assets/image/buque (8).jpg" />
+                <img src="src/assets/image/orquidea (3).jpg" />
+                
             </div>
-        </section>
-    </main>
+            <p>
+                Receber flores é como ganhar um pedaço de sentimento em forma de cor e perfume.
+            </p>
+            <p>
+                É quando alguém transforma o que sente em algo visível, delicado e cheio de significado
+            </p>
+        </div>
+    </section>
+
+    <section id="sobre">
+    <h2>Sobre a Florista</h2>
+        <p>
+            Entusiasta da flora e do design floral, encontro na montagem de arranjos
+            um exercício de criatividade e atenção aos detalhes. Cuidar de flores é
+            mais que um hobby: é uma forma de cultivar paciência e harmonia.
+        </p>
+    </section>
+
+    <section id="contato">
+    <h2>Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea placeholder="Sua mensagem"></textarea>
+            <button>Enviar</button>
+        </form>
+    </section>
 
     <footer>
-        <h3>Contato</h3>
-        <p>Email: contato@YasminFlores&Design.com</p>
-        <p>Telefone: (00) 00000-0000</p>
-        <p>© Yasmin Flores & Design - Florista</p>
+        
     </footer>
 
 </body>

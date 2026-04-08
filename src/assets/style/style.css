@@ -1,0 +1,220 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;scroll-behavior:smooth;}
+
+    :root{
+      --bg:#fbf7ff;
+      --text:#161616;
+      --brand:#6b2bbf;
+      --brand2:#b98cff;
+    }
+
+    body{background:var(--bg);color:var(--text);}
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      background:#ffffffcc;
+      backdrop-filter:blur(10px);
+      padding:15px;
+      text-align:center;
+      
+    }
+
+    header a{
+      margin:0 20px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:bold;
+    }
+
+    section{
+      min-height:100vh;
+      padding:100px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    #inicio h1{
+      font-size:6rem;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    #inicio p{
+      margin:15px 0;
+      color:#555;
+      font-size:1.7rem;
+      font-family: italic;
+    }
+
+    
+    .btn{
+      position: relative;
+      padding: 10px 20px;
+      border-radius:10px;
+      color: black;
+      text-decoration:none;
+      font-weight:bold;
+      overflow: hidden;
+      border: 2px solid var(--brand);
+
+      transition: color 0.3s linear;
+
+      position: absolute;
+      top: 90%;
+    }
+
+    .btn::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: var(--brand);
+      z-index: -1;
+
+      transition: height 0.3s ease;
+    }
+
+    .btn:hover::before{
+      height: 100%;
+    }
+
+    .btn:hover{
+      color: white;
+    }
+
+    #galeria{
+      background:var(--brand2);
+      padding:50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
+    .galeria{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:15px;
+      width:100%;
+      max-width:1000px;
+    }
+
+    .galeria{
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .galeria::after{
+      right: 0;
+      background: linear-gradient(to left, var(--brand2), transparent);
+    }
+
+    .galeria{
+      position: relative;
+    }
+
+    .carrossel{
+      display: flex;
+      gap: 20px;
+      width: max-content;
+
+      animation: slide 12s linear infinite alternate;
+    }
+
+    .carrossel img{
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+      flex-shrink: 0; /* MUITO IMPORTANTE */
+    }
+
+    /* pausa no hover */
+    .carrossel:hover{
+      animation-play-state: paused;
+    }
+
+    /* animação */
+    @keyframes slide{
+      0%{
+        transform: translateX(0);
+      }
+      100%{
+        transform: translateX(-50%);
+      }
+    }
+
+    #galeria h2{
+      justify-self:flex-end;
+      margin-bottom:20px;
+      font-size:2.5rem;
+      color:var(--text);
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .galeria img{
+      width:100%;
+      border-radius:15px;
+    }
+
+    .expliq{
+      max-width:700px;
+      margin-top:30px;
+      padding:20px;
+      border-radius:15px;
+      background:white;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      font-style:italic;
+      color:#555;
+      line-height:1.6;
+    }
+
+    #sobre p{
+      max-width:700px;
+      line-height:1.6;
+      margin-top:15px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      width:100%;
+      max-width:400px;
+    }
+
+    input, textarea{
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #ccc;
+    }
+
+    button{
+      padding:12px;
+      border:none;
+      border-radius:25px;
+      background:var(--brand);
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#eee;
+    }
+
+    @media(min-width:768px){
+      .galeria{
+        grid-template-columns: repeat(3,1fr) ;
+      }
+    }
